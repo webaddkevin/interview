@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数组去重</title>
+</head>
+<body>
+	<h2>数组去重</h2>
+	<script type="text/javascript">
+		var arr1 = [1,2,2,2,3]
+		function unique1(arr){
+			var newarr = [];
+			for(let i=0 ;i<arr.length;i++){
+				if(!newarr.includes(arr[i])){
+					newarr.push(arr[i])
+				}
+			}
+			return newarr
+		}
+		console.log(unique1(arr1))
+
+		function unique2(arr){
+			return Array.from(new Set(arr))
+		}
+		console.log(unique2(arr1))
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数组排序问题</title>
+</head>
+<body>
+	<h2>数组排序问题</h2>
+	<script type="text/javascript">
+		var arr1 = [3,2,3,4,5,1,2]
+		function sort1(arr){ //二分法
+			if(arr.length<1){
+				return arr
+			}
+			var middleIndex = Math.floor(arr.length/2)
+			var middle = arr.splice(middleIndex,1);
+			var arrLeft = [];
+			var arrRight = [];
+			for(let i = 0;i<arr.length;i++){
+				if(arr[i]>middle){
+					arrRight.push(arr[i])
+				} else {
+					arrLeft.push(arr[i])
+				}
+			}
+			return sort1(arrLeft).concat(middle,sort1(arrRight))
+		}
+		// console.log(sort1(arr1))
+		console.log(arr1.sort(function(a,b){
+			return a>b?1:-1;
+		}))
+
+	</script>
+</body>
+</html>

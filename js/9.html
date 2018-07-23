@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js创建对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1 。构造函数创建对象
+		function Hello(a,b){
+			this.a = a;
+			this.b = b;
+		}
+		var obj = new Hello(1,2)
+		console.log(obj)
+
+		// 2. 直接定义
+		var obj2 = {
+			a:1,
+			b:2
+		}
+		console.log(obj2)
+
+		// 3. class类创建
+		class Obj{
+			constructor(a,b){
+				this.a = a;
+				this.b = b;
+			}
+		}
+		class Objj extends Obj{ //继承
+			constructor(a,b,c){
+				super(a,b)
+				this.c = c
+			}
+		}
+		console.log(new Obj(1,2))
+		console.log(new Objj(1,2,3))
+	</script>
+</body>
+</html>

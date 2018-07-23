@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vue双向数据绑定原理</title>
+</head>
+<body>
+	<h2>vue双向数据绑定原理</h2>
+	<script type="text/javascript">
+		var obj = {}
+
+		Object.defineProperty(obj,'hello',{
+			get:function(){
+				console.log('get被调用')
+			},
+			set:function(val){
+				console.log(`设置了${val}`)
+			}
+		})
+
+		obj.hello
+		obj.hello = 'world'
+		
+	</script>
+</body>
+</html>

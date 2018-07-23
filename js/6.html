@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js中call apply. bind</title>
+</head>
+<body>
+	<h2>js中call apply. bind</h2>
+	<script type="text/javascript">
+		var obj = {
+			a:1,
+			fn(a,b){
+				console.log(a+b)
+				console.log(this.a)
+			}
+		}
+
+		var fns = obj.fn
+		// fns(). 报错
+		fns.call(obj,1,2)
+		fns.apply(obj,[1,2])
+		var fnsc = fns.bind(obj,1)
+		fnsc(2)
+		// call 和 apply都是让this指向对象 
+		// call与apply后面可以向方法中传参数。 apply后面的参数是一个数组
+		// bind 是可以让函数独立出来，当调用的时候可以传参
+
+	</script>
+</body>
+</html>

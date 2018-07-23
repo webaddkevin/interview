@@ -1,2 +1,14 @@
-# interview
-面试题总结
+# 知识简单汇总
+1. css
+2. js
+3. vue
+4. less
+5. sass
+6. gulp
+7. webpack
+8. seo
+9. node
+10. react
+11. redux
+12. vuex
+13. else

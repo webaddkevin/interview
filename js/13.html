@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js继承</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// js 继承的实现方式。是通过原型链
+		// 1. js原型prototype实现继承
+
+		function Person(){
+			this.foot = 1;
+		}
+		Person.prototype = new Person()
+		Person.prototype.header =2
+		var a = new Person()
+		console.log(a.header)
+	</script>
+</body>
+</html>

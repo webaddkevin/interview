@@ -1,0 +1,8 @@
+$baseFont:12px;
+@function setFontSize($size){
+	@return 0.1*$size*$baseFont
+}
+
+h2{
+	width: setFontSize(3);
+}

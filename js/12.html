@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>判断数据类型</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1.以4判断是否是数组为例
+
+		var arr1 = [1,23,1]
+		var obj = {
+			a:1,b:2
+		}
+		function isArray(arr){
+			if(Object.prototype.toString.call(arr)=='[object Array]'){
+				console.log('数组')
+			} else {
+				console.log('不是数组')
+			}
+		}
+		isArray(arr1)
+		isArray(obj)
+
+		// 2.第二个 arr.constructor ==Array
+		console.log(arr1.constructor == Array)
+		console.log(obj.constructor == Array)
+
+		//3. 
+		console.log(Array.isArray(arr1))
+		console.log(Array.isArray(obj))
+	</script>
+</body>
+</html>

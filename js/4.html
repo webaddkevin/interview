@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js闭包</title>
+</head>
+<body>
+	<h2>js闭包</h2>
+	<script type="text/javascript">
+		function m(){
+			var a = 1
+			return function(){
+				a++;
+				console.log(a)
+			}
+		}
+		var mm = m()
+		mm()
+		mm()
+
+		// js闭包。 一个函数中定义了一个变量，然后 它有一个内函数操作了这个变量 ，外函数并返回了这个内函数
+		//当调用这个内函数时产生闭包
+		//
+		//。js闭包的好处。1。可以暴露函数内的变量 2.暴露的变量始终存储在内存中
+		// 坏处。 1。占内存。 2.使用不当造成内存泄露
+	</script>
+</body>
+</html>

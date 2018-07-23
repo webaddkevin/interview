@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数值三位加逗号</title>
+</head>
+<body>
+	<h2>数值三位加逗号</h2>
+	<script type="text/javascript">
+		function toThousand(num){
+			var arr = String(num).split('.')
+			var inter = arr[0];
+			var decimal = arr[1];
+			var result ='';
+			while(inter.length>3){
+				result = `,${inter.slice(-3)}${result}`
+				inter = inter.slice(0,inter.length-3)
+			}
+			if(inter.length>0){
+				result = inter+result
+			}
+			if(decimal){
+				result = result+'.'+decimal
+			}
+			return result
+		}
+		console.log(toThousand(111111.23232))
+		console.log(toThousand(111222))
+	</script>
+</body>
+</html>

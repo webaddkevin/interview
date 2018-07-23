@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vue父组件中调用子组件方法</title>
+</head>
+<body>
+	<h2>vue父组件中调用子组件方法</h2>
+	<script type="text/javascript">
+		
+	/*	<template>
+		    <div>
+		        <h1>我是父组件</h1>
+		        <child ref="child"></child>
+		    </div>
+		</template>
+		<script>
+		    import child from './child'
+		    export default{
+		        components:{ child },
+		        methods:{
+		            parent(){
+		                this.$refs.child.childFn()
+		            }
+		        }
+		    }
+		    	*/
+		//</script>
+	
+
+		// 在父组件调用的子组件上加一个ref   然后  this.$refs.child.childFn()
+
+
+		// 父组件传值给子组件   用props
+		// 子组件给父组件传值  定义事件   $emit
+
+	</script>
+</body>
+</html>
